@@ -1,0 +1,18 @@
+----Get the active best routes output RIB----
+get router info routing-table all
+
+---get the standby & inactive routes output----
+get router info routing-table database
+
+--policy route table---
+diagnose firewall proute list
+
+this contains three types of policy routes
+regular policy route with id < 65535
+ISDB routes id > 65536 and no vwl_service field
+SD-WAN routes id > 65535 and vwl_service field
+
+only some amount of policy routes normal can be configured depending on the model. fortigae 300D supports only 500 policy routes
+
+
+
