@@ -1,0 +1,21 @@
+-----------ECMP-------------
+if not in SD-WAN mode, use the below CLI.
+
+config-system settings
+  set v4 mode <ECMP options>
+end
+
+spillover CLI
+config system interface
+  edit <interface name>
+    set spillover-threshhold <value>
+    set ingress-spillover-threshhold <value>
+  next
+end
+
+weight CLI
+config system interface
+  edit <interface name>
+    set weight <0-255>
+    next
+end
