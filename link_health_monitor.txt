@@ -1,0 +1,23 @@
+link health monitor monitors the link and declares the static routes inactive, disable the policy-routes and bring down the alert interface (link bring down lan interface if wan goes down)
+
+---last three lines is for actions during dead state of links, i am enabling all three actions--
+config system link-monitor
+  edit port1-health
+    set srcintf port 1
+    set server <><><><> --> max of 4 servers to probe
+    set gateway <gw ip>
+    set protocol ping
+    set update-cascade-interface enable
+    set upfate-static-route enable
+    set update-policy-route enable
+  next
+end
+
+--configure port 3 as alert interface if port1 is detected dead, port 3 will be made down---
+config system interface
+  edit port1
+    set fail-detect enable
+    set fail-detect-option detectserver
+    set fail-alert-method link-down
+    set fail-alert-interfaces "port3" --> will bring down port3 when port1 is down
+  
