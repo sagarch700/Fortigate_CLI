@@ -1,0 +1,10 @@
+by default loose mode rpf.
+
+config system settings
+  set strict-src-check [disable | enable] --> default disable means loose
+
+config system interface
+  edit <interface>
+    set src-check disable --> disables the rpf loose and strict, default is enable
+  next
+end
