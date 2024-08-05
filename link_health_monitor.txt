@@ -20,4 +20,6 @@ config system interface
     set fail-detect-option detectserver
     set fail-alert-method link-down
     set fail-alert-interfaces "port3" --> will bring down port3 when port1 is down
+
+get router info routing-table all
   
