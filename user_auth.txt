@@ -1,0 +1,6 @@
+diagnose test authserver ldap <server name> <usernam> <password>
+diagnose test authserver raidus <server name> <scheme> <username> <password>
+
+Active Auth:- Radius, LDAP, Local, and TACACS+
+Passive auth(no prompt):- FSSO, RSSO, and NTLM
+
