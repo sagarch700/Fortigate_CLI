@@ -1,0 +1,9 @@
+SSL VPN Modes: Tunnel & web mode
+  need a vpn client: forticlient
+  web mode only needs a browser, but allows only limited protocols: ftp, http, https, RDP, SSH, Telnet, VNC, etc.
+
+config vpn ssl web portal
+  edit <portal-name>
+  set tunnel-modes [enable|disable]
+  set web-mode [enable|disable]
+end
