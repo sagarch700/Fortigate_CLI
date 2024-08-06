@@ -7,3 +7,11 @@ config vpn ssl web portal
   set tunnel-modes [enable|disable]
   set web-mode [enable|disable]
 end
+
+diagnose debug enable
+diagnose vpn ssl <list/info/statistics/debug-filter/tunnel-test/web-mode-test>
+diagnose debug application sslvpn -1
+diagnose debug application fnbamd -1
+diagnose debug console timestamp enable
+
+
